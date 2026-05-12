@@ -2,19 +2,161 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-  <head>
+<head>
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Formularios HTML 1</title>
+    <title>Eventos</title>
     <link rel="stylesheet"
     href="hojaEstilo.css">
-  </head>
-  
-  <h1>Eventos Jose Ramiro</h1>
-
-  <h3>Imágenes del evento</h3>
-
-  <body>
     
- </body>
+</head>
+
+
+
+<!--Cabecera principal de la página con el nombre y el menú lateral-->
+
+<div id="cabecera_principal">
+
+  <h1>Videojuegos Jose Ramiro</h1>
+
+        <div class="menu">
+            <div class="menu" tabindex="0">
+                <button>Menú</button>
+                <ul class="menu_lateral">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#products">Imágenes del evento</a></li>
+                    <li><a href="#calculadora">Calcula tu precio</a></li>
+                    <li><a href="#contact_form">Contáctanos</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+<!--Fin de la cabecera principal-->
+
+
+
+<body>
+
+<!--Primera parte de la página con las imágenes reactivas e intercambiables-->
+
+<div id="division_contenido">
+
+  <h2>Nuestros productos</h2>
+
+  <!--Primera imágen-->
+
+  <div id="linea_imagenes">
+    <div class="item">
+      <img id="mainImage" src="content/bf6.png"></img>
+    </div>
+  </div>
+  <!--Fin primera imágen-->
+
+  <!--Imágenes en línea seleccionables-->
+  <div id="linea_imagenes">
+
+    <div class="item">
+      <img src="content/bf6.png" onclick="cambiarImagen(this.src)"></img>
+    </div>
+
+    <div class="item">
+      <img src="content/corsa.png" onclick="cambiarImagen(this.src)"></img>
+    </div>
+
+    <div class="item">
+      <img src="content/helldivers.png" onclick="cambiarImagen(this.src)"></img>
+    </div>
+
+    <div class="item">
+      <img src="content/bo2.png" onclick="cambiarImagen(this.src)"></img>
+    </div>
+
+  </div>
+
+  <!--Fin de las imágenes-->
+
+</div>
   
+<!--Final primera parte-->
+
+
+
+<!--Segunda parte de la página con la calculadora -->
+
+<div id="division_contenido">
+
+  <h2>Calcula tu precio</h2>
+
+    <label for="producto">Selecciona un producto:</label>
+      <select id="producto">
+        <option value="120">Battlefield 6 - 120,00 €</option>
+        <option value="40">Assetto Corsa Evo - 40,00 €</option>
+        <option value="12.50">Helldivers II - 25,50 €</option>
+        <option value="10.60">Call of Duty Black Ops 2 - 10,60 €</option>
+      </select>
+
+    <label for="cantidad">Cantidad:</label>
+      <input type="number" id="cantidad" value="1" min="1" />
+
+    <label for="iva">IVA (%):</label>
+      <input type="number" id="iva" value="21" min="0" step="1" />
+
+    <div class="resultado">
+      Precio sin IVA:
+      <span class="precio" id="precioSinIva">0.00 €</span><br>
+
+      Precio con IVA:
+      <span class="precio" id="precioConIva">0.00 €</span>
+    </div>
+    
+  </div>
+
+
+<!--Tercera parte de la página con el formulario de contacto-->
+
+  <div id="division_contenido">
+
+    <h2>Alguna duda?
+      <br>
+      Contacta con nosotros</h2>
+
+<!--Formulario de contacto-->
+    <div id="form_inline">
+      
+      <form>
+
+      <label for="email">E-mail:</label>
+      <input type="email" class="form-control" id="email" placeholder="Introduce tu email">
+
+
+      <label for="pwd">Contraseña:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Introduce la contraseña">
+
+      <button
+        type="submit" class="btn btn-default" id="envio">Enviar
+      </button>
+
+      </form>
+
+
+    </div>
+<!--Fin del formulario-->
+
+<!--Fin de la tercera parte de la página-->
+
+
+
+<!--Final de la página con la cabecera inferior-->
+  <div id="cabecera_principal">
+    <p>Todos los derechos reservados 2026</p>
+  </div>
+<!--Fin de la página-->
+
+
+<!--Link al archivo JavaScript-->
+<script src="script.js"></script>
+
+</body>
+
 </html>

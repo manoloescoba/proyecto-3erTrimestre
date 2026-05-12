@@ -1,18 +1,170 @@
-{
-background-color:#f2f2f2;
-font-family:Arial;
+
+
+/*
+    Atributos generales de la página
+    Cambian el color de fondo y la fuente de cualquier texto que no esté en <body> u otro elemento
+*/
+
+    {
+        background-color: #f2f2f2;
+        font-family: Arial;
+    }
+
+/*-----------------------------------------------------------------------------------------------*/
+
+/*
+    Atributos para la cabecera principal
+*/
+
+    #cabecera_principal{
+        border-width: 1px;
+        border-style: solid;
+        background-color: rgb(39, 60, 99);
+        border-color: rgb(0, 0, 0);
+        padding: 1px;
+        margin: 1px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+/*-----------------------------------------------------------------------------------------------*/
+
+
+/*
+    Atributos para el texto de la cabecera principal
+*/
+
+    h1{
+        text-align: Left;
+        font-family: Arial;
+        color: #ffffff;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-left: 10px;
+    }
+
+/*-----------------------------------------------------------------------------------------------*/
+
+/*
+    Atributos para los párrafos
+*/
+
+    p{
+        text-align: center;
+        font-family: Arial;
+        color: #ffffff;
+        margin-top: 15px;
+        margin-bottom:10px;
+        display:flex;
+        align-items: center;
+    }
+
+/*-----------------------------------------------------------------------------------------------*/
+
+/*
+    Atributos para la sub-cabecera
+*/
+
+    h2{
+        text-align: center;
+        font-family: Arial;
+        font-size: 30px;
+        color: #000000;
+        margin-top: 60px;
+        margin-bottom:20px;
+    }
+
+/*-----------------------------------------------------------------------------------------------*/
+
+/*
+    Atributos para las imágenes en líneas
+    Ajustan las imagenes para que se muestren en la misma línea
+*/
+
+    #linea_imagenes{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+        padding: 20px;
+        margin-top: 120px;
+    }
+
+/*-----------------------------------------------------------------------------------------------*/
+
+/*
+    Atributos para el ajuste de las imágenes
+*/
+
+    .item img{
+        max-width: 200px;
+        max-height: 200px;
+        height: auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+/*-----------------------------------------------------------------------------------------------*/
+
+/*
+    Atributos para la reactividad de las imágenes
+*/
+    .item img:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+
+    }
+/*-----------------------------------------------------------------------------------------------*/
+
+/*
+    Atributos para la separación de las distintas partes de la página
+*/
+
+    #division_contenido{
+        text-align: center;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(214, 212, 212);
+        padding-top:5px;
+        padding-bottom:10px;
+        margin: 5px;
+    }
+
+/*-----------------------------------------------------------------------------------------------*/
+
+/*
+    Atributos para el formulario
+*/
+
+    #form_inline{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding:20px;
+    }
+
+
+/*-----------------------------------------------------------------------------------------------*/
+
+
+/*
+    Menu lateral desplegable
+*/
+
+.menu {
+    position: right;
+    display: inline-block;
 }
 
-h1{
-text-align:center;
-font-family:Arial;
-color:#393838;
-margin-top:40px;
-margin-bottom:20px;
+.menu_lateral {
+    display: none;
+    position: right;
+    background: #ffffff;
+    font-family:Verdana;
+    font-size:14px;
 }
 
-h3{
-    
-font-family:Arial;
-font-size:25px;
+.menu:focus-within .menu_lateral {
+    display: block;
 }
